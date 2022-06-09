@@ -1,0 +1,320 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6278e30b_59e7d3b0",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2022-06-09T20:42:27Z",
+      "side": 1,
+      "message": "Checks",
+      "range": {
+        "startLine": 9,
+        "startChar": 27,
+        "endLine": 9,
+        "endChar": 33
+      },
+      "revId": "f3af7e41fb2d7e4f5cf8af9d47fd67d15b2e7cb3",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c6df3b4b_e2ea3d2c",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2022-06-09T20:42:27Z",
+      "side": 1,
+      "message": "Not needed: just say \"for Jenkins\"",
+      "range": {
+        "startLine": 10,
+        "startChar": 60,
+        "endLine": 10,
+        "endChar": 63
+      },
+      "revId": "f3af7e41fb2d7e4f5cf8af9d47fd67d15b2e7cb3",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5d60ce47_51a0b124",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2022-06-09T20:42:27Z",
+      "side": 1,
+      "message": "the results",
+      "range": {
+        "startLine": 10,
+        "startChar": 5,
+        "endLine": 10,
+        "endChar": 12
+      },
+      "revId": "f3af7e41fb2d7e4f5cf8af9d47fd67d15b2e7cb3",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3a4832e7_4ad7bba2",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2022-06-09T20:42:27Z",
+      "side": 1,
+      "message": "gerrit-code-review [1]\n\n[1] https://plugins.jenkins.io/gerrit-code-review/",
+      "range": {
+        "startLine": 13,
+        "startChar": 42,
+        "endLine": 13,
+        "endChar": 58
+      },
+      "revId": "f3af7e41fb2d7e4f5cf8af9d47fd67d15b2e7cb3",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1cbcd05d_666c6504",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2022-06-09T20:42:27Z",
+      "side": 1,
+      "message": "Jenkins",
+      "range": {
+        "startLine": 16,
+        "startChar": 12,
+        "endLine": 16,
+        "endChar": 19
+      },
+      "revId": "f3af7e41fb2d7e4f5cf8af9d47fd67d15b2e7cb3",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9cd5c047_b59caea6",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2022-06-09T20:42:27Z",
+      "side": 1,
+      "message": "Why don\u0027t you list instead the features that are implemented by this initial change?",
+      "range": {
+        "startLine": 21,
+        "startChar": 0,
+        "endLine": 25,
+        "endChar": 0
+      },
+      "revId": "f3af7e41fb2d7e4f5cf8af9d47fd67d15b2e7cb3",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fdc059d9_f6583a21",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2022-06-09T20:42:27Z",
+      "side": 1,
+      "message": "Any references to the Jenkins docs on how to enable CORS?",
+      "range": {
+        "startLine": 27,
+        "startChar": 33,
+        "endLine": 28,
+        "endChar": 8
+      },
+      "revId": "f3af7e41fb2d7e4f5cf8af9d47fd67d15b2e7cb3",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "867acc89_d33c67c9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2022-06-09T20:42:27Z",
+      "side": 1,
+      "message": "@Thomas: amazing, thanks again for starting this initiative !\n\nP.S. It looks like the ACL of this repo do not allow me to vote, however, it would have been a +1",
+      "revId": "f3af7e41fb2d7e4f5cf8af9d47fd67d15b2e7cb3",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "515b9de8_6e727636",
+        "filename": "src/main/java/com/google/gerrit/plugins/checks/jenkins/GetConfig.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2022-06-09T20:42:27Z",
+      "side": 1,
+      "message": "This isn\u0027t needed: the gerrit-code-review plugin knows how to find the jobs. Why don\u0027t we expose that with a REST-API in the Jenkins side of things?",
+      "range": {
+        "startLine": 62,
+        "startChar": 0,
+        "endLine": 65,
+        "endChar": 18
+      },
+      "revId": "f3af7e41fb2d7e4f5cf8af9d47fd67d15b2e7cb3",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f34a930e_0e08700e",
+        "filename": "src/main/java/com/google/gerrit/plugins/checks/jenkins/Module.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2022-06-09T20:42:27Z",
+      "side": 1,
+      "message": "ApiModule?",
+      "range": {
+        "startLine": 21,
+        "startChar": 13,
+        "endLine": 21,
+        "endChar": 19
+      },
+      "revId": "f3af7e41fb2d7e4f5cf8af9d47fd67d15b2e7cb3",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4e4b4ae5_61f09328",
+        "filename": "src/main/resources/Documentation/about.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2022-06-09T20:42:27Z",
+      "side": 1,
+      "message": "gerrit-code-review",
+      "range": {
+        "startLine": 11,
+        "startChar": 59,
+        "endLine": 11,
+        "endChar": 75
+      },
+      "revId": "f3af7e41fb2d7e4f5cf8af9d47fd67d15b2e7cb3",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1f8ca7e4_8a59e34e",
+        "filename": "src/main/resources/Documentation/about.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2022-06-09T20:42:27Z",
+      "side": 1,
+      "message": "Can you list here what is implemented?",
+      "range": {
+        "startLine": 15,
+        "startChar": 46,
+        "endLine": 16,
+        "endChar": 41
+      },
+      "revId": "f3af7e41fb2d7e4f5cf8af9d47fd67d15b2e7cb3",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cc09a547_a3d265ea",
+        "filename": "src/main/resources/Documentation/config.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2022-06-09T20:42:27Z",
+      "side": 1,
+      "message": "Any reasons why we don\u0027t use the [plugin \"checkins-jenkins\"] config section in gerrit.config?\n\nIt will also allow to render the settings in the Gerrit UI and allow remote configuration and delegation to the project owner.",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 28
+      },
+      "revId": "f3af7e41fb2d7e4f5cf8af9d47fd67d15b2e7cb3",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "efcb8809_7f31e8b1",
+        "filename": "src/main/resources/Documentation/config.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2022-06-09T20:42:27Z",
+      "side": 1,
+      "message": "This isn\u0027t needed: see my comment on the commit message.\n\nThe functionality is there in the gerrit-code-review plugin, we just need to expose it.",
+      "range": {
+        "startLine": 15,
+        "startChar": 0,
+        "endLine": 18,
+        "endChar": 25
+      },
+      "revId": "f3af7e41fb2d7e4f5cf8af9d47fd67d15b2e7cb3",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
