@@ -16,6 +16,23 @@
       "message": "All plugins should be a sub-project of Public-Plugins",
       "revId": "2afda82afa98b2211481f4871549b3dc24a97714",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8fad2242_5d19187f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1004034
+      },
+      "writtenOn": "2022-06-10T07:15:31Z",
+      "side": 1,
+      "message": "Thomas pushed the same change earlier here\nhttps://gerrit-review.googlesource.com/c/plugins/checks-jenkins/+/339154\n\nhe\u0027s currently in vacation",
+      "revId": "2afda82afa98b2211481f4871549b3dc24a97714",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
