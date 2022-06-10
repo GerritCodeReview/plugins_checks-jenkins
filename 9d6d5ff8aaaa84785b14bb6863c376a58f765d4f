@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2882f96e_7bfc73da",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1013302
+      },
+      "writtenOn": "2022-06-10T07:18:56Z",
+      "side": 1,
+      "message": "I cannot approve, but I am looking for someone who can.",
+      "revId": "9d6d5ff8aaaa84785b14bb6863c376a58f765d4f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
