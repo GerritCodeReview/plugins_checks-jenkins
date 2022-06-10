@@ -179,6 +179,23 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "d3ed48e3_3be32967",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1013302
+      },
+      "writtenOn": "2022-06-10T07:28:02Z",
+      "side": 1,
+      "message": "The web/ part of the plugin looks good. Thank you!\n\nI did not bother to comment much on `fetcher.ts`, because I see it as my own duty to make another pass and polish it a bit. Will send you a change for that as a follow-up.\n\nDon\u0027t yet have permission to vote on this change.",
+      "revId": "f3af7e41fb2d7e4f5cf8af9d47fd67d15b2e7cb3",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "515b9de8_6e727636",
