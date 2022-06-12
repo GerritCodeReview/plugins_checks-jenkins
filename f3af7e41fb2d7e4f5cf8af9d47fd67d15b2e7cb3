@@ -24,6 +24,30 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "e32b886a_1fbdd9f3",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2022-06-12T08:42:13Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6278e30b_59e7d3b0",
+      "range": {
+        "startLine": 9,
+        "startChar": 27,
+        "endLine": 9,
+        "endChar": 33
+      },
+      "revId": "f3af7e41fb2d7e4f5cf8af9d47fd67d15b2e7cb3",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "c6df3b4b_e2ea3d2c",
@@ -70,6 +94,54 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "e8720aac_30b473a6",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2022-06-12T08:42:13Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5d60ce47_51a0b124",
+      "range": {
+        "startLine": 10,
+        "startChar": 5,
+        "endLine": 10,
+        "endChar": 12
+      },
+      "revId": "f3af7e41fb2d7e4f5cf8af9d47fd67d15b2e7cb3",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "69bb4784_8551a25e",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2022-06-12T08:42:13Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c6df3b4b_e2ea3d2c",
+      "range": {
+        "startLine": 10,
+        "startChar": 60,
+        "endLine": 10,
+        "endChar": 63
+      },
+      "revId": "f3af7e41fb2d7e4f5cf8af9d47fd67d15b2e7cb3",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "3a4832e7_4ad7bba2",
@@ -83,6 +155,30 @@
       "writtenOn": "2022-06-09T20:42:27Z",
       "side": 1,
       "message": "gerrit-code-review [1]\n\n[1] https://plugins.jenkins.io/gerrit-code-review/",
+      "range": {
+        "startLine": 13,
+        "startChar": 42,
+        "endLine": 13,
+        "endChar": 58
+      },
+      "revId": "f3af7e41fb2d7e4f5cf8af9d47fd67d15b2e7cb3",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7f51c49e_153262b9",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2022-06-12T08:42:13Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "3a4832e7_4ad7bba2",
       "range": {
         "startLine": 13,
         "startChar": 42,
@@ -116,6 +212,30 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "51463174_e986c24e",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2022-06-12T08:42:13Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1cbcd05d_666c6504",
+      "range": {
+        "startLine": 16,
+        "startChar": 12,
+        "endLine": 16,
+        "endChar": 19
+      },
+      "revId": "f3af7e41fb2d7e4f5cf8af9d47fd67d15b2e7cb3",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "9cd5c047_b59caea6",
@@ -139,6 +259,30 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "4e6bdc5b_a21d4e3a",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2022-06-12T08:42:13Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9cd5c047_b59caea6",
+      "range": {
+        "startLine": 21,
+        "startChar": 0,
+        "endLine": 25,
+        "endChar": 0
+      },
+      "revId": "f3af7e41fb2d7e4f5cf8af9d47fd67d15b2e7cb3",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "fdc059d9_f6583a21",
@@ -152,6 +296,30 @@
       "writtenOn": "2022-06-09T20:42:27Z",
       "side": 1,
       "message": "Any references to the Jenkins docs on how to enable CORS?",
+      "range": {
+        "startLine": 27,
+        "startChar": 33,
+        "endLine": 28,
+        "endChar": 8
+      },
+      "revId": "f3af7e41fb2d7e4f5cf8af9d47fd67d15b2e7cb3",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "92534b60_4c28cb9c",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2022-06-12T08:42:13Z",
+      "side": 1,
+      "message": "There is a plugin: https://plugins.jenkins.io/cors-filter/. However, it didn\u0027t work for me locally. The required headers were not added. I didn\u0027t debug it, but used a nginx proxy in front of Jenkins to add the required headers:\n\n  upstream api {\n    # Could be host.docker.internal - Docker for Mac/Windows - the host itself\n    # Could be your API in a appropriate domain\n    # Could be other container in the same network, like container_name:port\n    server host.docker.internal:8080;\n  }\n\n  server {\n    listen 80;\n    server_name localhost;\n\n    location / {\n\n      if ($request_method \u003d \u0027OPTIONS\u0027) {\n        add_header \u0027Access-Control-Max-Age\u0027 1728000;\n        add_header \u0027Access-Control-Allow-Origin\u0027 \u0027*\u0027;\n        add_header \u0027Access-Control-Allow-Headers\u0027 \u0027Authorization,Accept,Origin,DNT,X-CustomHeader,Keep-Alive,User-Agent,\n        X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Content-Range,Range\u0027;\n        add_header \u0027Access-Control-Allow-Methods\u0027 \u0027GET,POST,OPTIONS,PUT,DELETE,PATCH\u0027;\n        add_header \u0027Content-Type\u0027 \u0027application/json\u0027;\n        add_header \u0027Content-Length\u0027 0;\n        return 204;\n      }\n\n      add_header \u0027Access-Control-Allow-Origin\u0027 \u0027*\u0027;\n      add_header \u0027Access-Control-Allow-Headers\u0027 \u0027Authorization,Accept,Origin,DNT,X-CustomHeader,Keep-Alive,User-Agent,\n      X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Content-Range,Range\u0027;\n      add_header \u0027Access-Control-Allow-Methods\u0027 \u0027GET,POST,OPTIONS,PUT,DELETE,PATCH\u0027;\n\n      proxy_pass http://api/;\n    }\n  }\n\nThis needs some adaptation for production use. It would be nice to get rid of this.",
+      "parentUuid": "fdc059d9_f6583a21",
       "range": {
         "startLine": 27,
         "startChar": 33,
@@ -196,6 +364,24 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "a258df50_8230f7cd",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2022-06-12T08:42:13Z",
+      "side": 1,
+      "message": "Yes, we need to change the parent project to provide the default access permissions.",
+      "parentUuid": "d3ed48e3_3be32967",
+      "revId": "f3af7e41fb2d7e4f5cf8af9d47fd67d15b2e7cb3",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "515b9de8_6e727636",
@@ -209,6 +395,30 @@
       "writtenOn": "2022-06-09T20:42:27Z",
       "side": 1,
       "message": "This isn\u0027t needed: the gerrit-code-review plugin knows how to find the jobs. Why don\u0027t we expose that with a REST-API in the Jenkins side of things?",
+      "range": {
+        "startLine": 62,
+        "startChar": 0,
+        "endLine": 65,
+        "endChar": 18
+      },
+      "revId": "f3af7e41fb2d7e4f5cf8af9d47fd67d15b2e7cb3",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2658b6dc_4c288051",
+        "filename": "src/main/java/com/google/gerrit/plugins/checks/jenkins/GetConfig.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2022-06-12T08:42:13Z",
+      "side": 1,
+      "message": "Yes, this is what I meant with this comment. We first need to do some changes in Jenkins to have a better way of finding builds that work on a patchset. Then we don\u0027t need this configuration anymore, but as of right now this is still required.\n\nAlso we don\u0027t only have the gerrit-code-review plugin, but also the gerrit-trigger plugin and IMO there should be a unified API for both. That is why I propose yet (unfortunately) another plugin that uses the lucene-search plugin to identify such builds by querying for properties set by the two plugins. Both plugins store the change-number and patchset-number in build properties, so they are already queryable with the lucene search plugin. The new plugin could then collect relevant data (status etc.) in a structured way to be accessed e.g. by Gerrit. Implementing the same thing in both plugins would cause duplication and might lead to a diverged data model.",
+      "parentUuid": "515b9de8_6e727636",
       "range": {
         "startLine": 62,
         "startChar": 0,
@@ -242,6 +452,30 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "4ba10d68_094c39ba",
+        "filename": "src/main/java/com/google/gerrit/plugins/checks/jenkins/Module.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2022-06-12T08:42:13Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "f34a930e_0e08700e",
+      "range": {
+        "startLine": 21,
+        "startChar": 13,
+        "endLine": 21,
+        "endChar": 19
+      },
+      "revId": "f3af7e41fb2d7e4f5cf8af9d47fd67d15b2e7cb3",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "4e4b4ae5_61f09328",
@@ -265,6 +499,30 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "8da7e5f3_3ff1ba8a",
+        "filename": "src/main/resources/Documentation/about.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2022-06-12T08:42:13Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4e4b4ae5_61f09328",
+      "range": {
+        "startLine": 11,
+        "startChar": 59,
+        "endLine": 11,
+        "endChar": 75
+      },
+      "revId": "f3af7e41fb2d7e4f5cf8af9d47fd67d15b2e7cb3",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "1f8ca7e4_8a59e34e",
@@ -278,6 +536,30 @@
       "writtenOn": "2022-06-09T20:42:27Z",
       "side": 1,
       "message": "Can you list here what is implemented?",
+      "range": {
+        "startLine": 15,
+        "startChar": 46,
+        "endLine": 16,
+        "endChar": 41
+      },
+      "revId": "f3af7e41fb2d7e4f5cf8af9d47fd67d15b2e7cb3",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4b04138b_a1e83678",
+        "filename": "src/main/resources/Documentation/about.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2022-06-12T08:42:13Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1f8ca7e4_8a59e34e",
       "range": {
         "startLine": 15,
         "startChar": 46,
@@ -313,6 +595,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "d9103813_2273f9d5",
+        "filename": "src/main/resources/Documentation/config.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2022-06-12T08:42:13Z",
+      "side": 1,
+      "message": "With the current way, a project owner can configure multiple Jenkins instances by using multiple sections in checks-jenkins.config. At least for some of our stakeholders, this would be a requirement. By only using the [plugin \"check-jenkins\"] section, it would not be possible to do so, at least until we got rid of the `jobs`-option, because we would not have a nice way to link jobs with a jenkins instance. Even after that, it might not be possible, since at one point we would like to add the possibility to configure credentials for each jenkins instance, which might (and should not) be the same for each Jenkins.",
+      "parentUuid": "cc09a547_a3d265ea",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 28
+      },
+      "revId": "f3af7e41fb2d7e4f5cf8af9d47fd67d15b2e7cb3",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "efcb8809_7f31e8b1",
         "filename": "src/main/resources/Documentation/config.md",
         "patchSetId": 1
@@ -324,6 +630,30 @@
       "writtenOn": "2022-06-09T20:42:27Z",
       "side": 1,
       "message": "This isn\u0027t needed: see my comment on the commit message.\n\nThe functionality is there in the gerrit-code-review plugin, we just need to expose it.",
+      "range": {
+        "startLine": 15,
+        "startChar": 0,
+        "endLine": 18,
+        "endChar": 25
+      },
+      "revId": "f3af7e41fb2d7e4f5cf8af9d47fd67d15b2e7cb3",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "89653cda_caed9dc2",
+        "filename": "src/main/resources/Documentation/config.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2022-06-12T08:42:13Z",
+      "side": 1,
+      "message": "See my previous comment.\nThe aim of this first POC for me was to get it to work with the current status in Jenkins. But, I agree this should change as also discussed in the mail thread.",
+      "parentUuid": "efcb8809_7f31e8b1",
       "range": {
         "startLine": 15,
         "startChar": 0,
