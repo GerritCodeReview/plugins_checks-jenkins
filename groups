@@ -1,3 +1,8 @@
-# UUID                                  	Group Name
+# UUID                                                        	Group Name
 #
-1d9cd0936532bde06e621bb0580e8ebc6be8f273	plugins-checks-jenkins
+1d9cd0936532bde06e621bb0580e8ebc6be8f273                      	plugins-checks-jenkins
+b49f61711e6c0148f9f4d90702015bb894289be9                      	gerrit-verifiers
+global:Change-Owner                                           	Change Owner
+global:Project-Owners                                         	Project Owners
+global:Registered-Users                                       	Registered Users
+google:AI2Pq9rwJtXWrKQ9Q62CcHSid7ngIF2hCfJ4bSpVquX_P2z5kFM6v9s	google/gerritcodereview-maintainers@googlegroups.com
