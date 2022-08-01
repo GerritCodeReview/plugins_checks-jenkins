@@ -2,7 +2,7 @@
 #
 1d9cd0936532bde06e621bb0580e8ebc6be8f273                      	plugins-checks-jenkins
 2edc94188dd0f1e72e027eb20a2fc3006e7d39ba                      	gerrit-ci
-b49f61711e6c0148f9f4d90702015bb894289be9                      	gerrit-verifiers
+b49f61711e6c0148f9f4d90702015bb894289be9                      	gerrit-trusted-contributors
 global:Anonymous-Users                                        	Anonymous Users
 global:Change-Owner                                           	Change Owner
 global:Project-Owners                                         	Project Owners
