@@ -34,6 +34,23 @@
       "parentUuid": "1c20fd49_58039ea4",
       "revId": "8feff12ce1f1029917c2ed60788d85d61f13253b",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "454d1728_497b531c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1024147
+      },
+      "writtenOn": "2022-08-30T16:21:31Z",
+      "side": 1,
+      "message": "try again?\n\nthe project didn\u0027t have a access config for refs/meta/config. ",
+      "revId": "8feff12ce1f1029917c2ed60788d85d61f13253b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
