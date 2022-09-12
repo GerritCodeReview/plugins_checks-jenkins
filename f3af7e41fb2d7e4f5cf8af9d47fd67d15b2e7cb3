@@ -429,6 +429,30 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "f78aa393_419794e5",
+        "filename": "src/main/java/com/google/gerrit/plugins/checks/jenkins/GetConfig.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2022-09-12T20:43:48Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "2658b6dc_4c288051",
+      "range": {
+        "startLine": 62,
+        "startChar": 0,
+        "endLine": 65,
+        "endChar": 18
+      },
+      "revId": "f3af7e41fb2d7e4f5cf8af9d47fd67d15b2e7cb3",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "f34a930e_0e08700e",
@@ -617,6 +641,30 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "186e7858_26bad7de",
+        "filename": "src/main/resources/Documentation/config.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2022-09-12T20:43:48Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "d9103813_2273f9d5",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 28
+      },
+      "revId": "f3af7e41fb2d7e4f5cf8af9d47fd67d15b2e7cb3",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "efcb8809_7f31e8b1",
@@ -654,6 +702,30 @@
       "side": 1,
       "message": "See my previous comment.\nThe aim of this first POC for me was to get it to work with the current status in Jenkins. But, I agree this should change as also discussed in the mail thread.",
       "parentUuid": "efcb8809_7f31e8b1",
+      "range": {
+        "startLine": 15,
+        "startChar": 0,
+        "endLine": 18,
+        "endChar": 25
+      },
+      "revId": "f3af7e41fb2d7e4f5cf8af9d47fd67d15b2e7cb3",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "24e6c352_d5bac3b8",
+        "filename": "src/main/resources/Documentation/config.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2022-09-12T20:43:48Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "89653cda_caed9dc2",
       "range": {
         "startLine": 15,
         "startChar": 0,
