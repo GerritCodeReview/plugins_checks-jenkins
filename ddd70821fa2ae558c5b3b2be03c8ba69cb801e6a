@@ -16,6 +16,23 @@
       "message": "I believe we\u0027re good as first implementation.",
       "revId": "ddd70821fa2ae558c5b3b2be03c8ba69cb801e6a",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2cf61af1_dc53b92f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2022-09-13T07:14:30Z",
+      "side": 1,
+      "message": "Verified with a local test Gerrit site and a local Jenkins with an Nginx proxy to enable CORS.",
+      "revId": "ddd70821fa2ae558c5b3b2be03c8ba69cb801e6a",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
