@@ -141,7 +141,7 @@ export class ChecksFetcher implements ChecksProvider {
   async fetchJobInfo(url: string): Promise<Job> {
     let response: Response;
     try {
-      response = await fetch(url);
+      response = await this.fetchFromJenkins(url);
       if (!response.ok) {
         throw response.statusText;
       }
@@ -156,7 +156,7 @@ export class ChecksFetcher implements ChecksProvider {
   }
 
   async fetchBuildInfo(url: string): Promise<BuildDetail> {
-    const response = await fetch(url);
+    const response = await this.fetchFromJenkins(url);
     if (!response.ok) {
       throw response.statusText;
     }
@@ -214,5 +214,10 @@ export class ChecksFetcher implements ChecksProvider {
       results,
     };
     return run;
+  }
+
+  private fetchFromJenkins(url: string): Promise<Response> {
+    const options: RequestInit = { credentials: 'include' };
+    return fetch(url, options);
   }
 }
