@@ -68,6 +68,23 @@
       "message": "Can you rebase?",
       "revId": "8feff12ce1f1029917c2ed60788d85d61f13253b",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7d82641a_8ab4b99e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2022-09-26T07:14:37Z",
+      "side": 1,
+      "message": "@luca.milanesio@gmail.com Could you rebase the change?",
+      "revId": "8feff12ce1f1029917c2ed60788d85d61f13253b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
