@@ -20,6 +20,7 @@ import {
   CheckResult,
   CheckRun,
   ChecksProvider,
+  FetchResponse,
   LinkIcon,
   ResponseCode,
   RunStatus,
@@ -59,17 +60,33 @@ export class ChecksFetcher implements ChecksProvider {
     this.configs = null;
   }
 
-  async fetch(changeData: ChangeData) {
+  async fetch(changeData: ChangeData): Promise<FetchResponse> {
+    try {
+      return this.innerFetch(changeData);
+    } catch (error: unknown) {
+      let errorMessage = 'unknown error';
+      if (error instanceof Error) errorMessage = error.message;
+      if (typeof error === 'string') errorMessage = error;
+      console.log(`CHECKSJ return error ${errorMessage}`);
+      return {
+        responseCode: ResponseCode.ERROR,
+        errorMessage,
+      };
+    }
+  }
+
+  async innerFetch(changeData: ChangeData) {
+    console.log('CHECKSJ fetch');
     if (this.configs === null) {
-      await this.fetchConfig(changeData)
-        .then(result => {
-          this.configs = result;
-        })
-        .catch(reason => {
-          throw reason;
-        });
+      try {
+        this.configs = await this.fetchConfig(changeData);
+      } catch (error) {
+        console.log(`CHECKSJ config fail ${error}`);
+        this.configs = this.fallbackConfig();
+      }
     }
     if (this.configs === null) {
+      console.log('CHECKSJ no config, return empty');
       return {
         responseCode: ResponseCode.OK,
         runs: [],
@@ -96,6 +113,7 @@ export class ChecksFetcher implements ChecksProvider {
       }
     }
 
+    console.log(`CHECKSJ return results ${JSON.stringify(checkRuns)}`);
     return {
       responseCode: ResponseCode.OK,
       runs: checkRuns,
@@ -129,6 +147,16 @@ export class ChecksFetcher implements ChecksProvider {
     return baseUrl + 'api/json?tree=number,result,building,url';
   }
 
+  fallbackConfig(): Config[] {
+    return [
+      {
+        url: 'https://gerrit-ci.gerritforge.com',
+        name: 'Gerrit CI',
+        jobs: ['Gerrit-verifier-pipeline'],
+      },
+    ];
+  }
+
   fetchConfig(changeData: ChangeData): Promise<Config[]> {
     const pluginName = encodeURIComponent(this.plugin.getPluginName());
     return this.plugin
@@ -142,10 +170,9 @@ export class ChecksFetcher implements ChecksProvider {
     let response: Response;
     try {
       response = await fetch(url);
-      if (!response.ok) {
-        throw response.statusText;
-      }
+      if (!response.ok) throw response.statusText;
     } catch (e) {
+      console.log(`CHECKSJ job info exception ${e}`);
       return {
         exists: false,
         builds: [],
@@ -156,9 +183,13 @@ export class ChecksFetcher implements ChecksProvider {
   }
 
   async fetchBuildInfo(url: string): Promise<BuildDetail> {
-    const response = await fetch(url);
-    if (!response.ok) {
-      throw response.statusText;
+    let response: Response;
+    try {
+      response = await fetch(url);
+      if (!response.ok) throw response.statusText;
+    } catch (e) {
+      console.log(`CHECKSJ build info exception ${e}`);
+      throw e;
     }
     const build: BuildDetail = await response.json();
     return build;
