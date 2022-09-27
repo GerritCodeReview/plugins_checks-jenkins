@@ -60,16 +60,20 @@ export class ChecksFetcher implements ChecksProvider {
   }
 
   async fetch(changeData: ChangeData) {
+    console.log('CHECKSJ fetch');
     if (this.configs === null) {
       await this.fetchConfig(changeData)
         .then(result => {
           this.configs = result;
         })
         .catch(reason => {
-          throw reason;
+          console.log(`CHECKSJ config fail ${reason}`);
+          this.configs = this.fallbackConfig();
+          // throw reason;
         });
     }
     if (this.configs === null) {
+      console.log('CHECKSJ return empty');
       return {
         responseCode: ResponseCode.OK,
         runs: [],
@@ -96,6 +100,7 @@ export class ChecksFetcher implements ChecksProvider {
       }
     }
 
+    console.log(`CHECKSJ return ${JSON.stringify(checkRuns)}`);
     return {
       responseCode: ResponseCode.OK,
       runs: checkRuns,
@@ -129,6 +134,16 @@ export class ChecksFetcher implements ChecksProvider {
     return baseUrl + 'api/json?tree=number,result,building,url';
   }
 
+  fallbackConfig(): Config[] {
+    return [
+      {
+        url: 'https://gerrit-ci.gerritforge.com',
+        name: 'Gerrit CI',
+        jobs: ['Gerrit-verifier-pipeline'],
+      },
+    ];
+  }
+
   fetchConfig(changeData: ChangeData): Promise<Config[]> {
     const pluginName = encodeURIComponent(this.plugin.getPluginName());
     return this.plugin
@@ -146,19 +161,45 @@ export class ChecksFetcher implements ChecksProvider {
         throw response.statusText;
       }
     } catch (e) {
-      return {
-        exists: false,
-        builds: [],
-      };
+      return JSON.parse(`
+      {
+        "_class" : "org.jenkinsci.plugins.workflow.job.WorkflowJob",
+        "builds" : [
+          {
+            "_class" : "org.jenkinsci.plugins.workflow.job.WorkflowRun",
+            "number" : 1,
+            "url" : "https://gerrit-ci.gerritforge.com/job/Gerrit-verifier-pipeline/job/79%252F346479%252F2/1/"
+          }
+        ]
+      }
+      `);
+      // return {
+      //   exists: false,
+      //   builds: [],
+      // };
     }
     const job: Job = await response.json();
     return job;
   }
 
   async fetchBuildInfo(url: string): Promise<BuildDetail> {
-    const response = await fetch(url);
-    if (!response.ok) {
-      throw response.statusText;
+    let response: Response;
+    try {
+      response = await fetch(url);
+      if (!response.ok) {
+        throw response.statusText;
+      }
+    } catch (e) {
+      return JSON.parse(`
+        {
+          "_class" : "org.jenkinsci.plugins.workflow.job.WorkflowRun",
+          "building" : false,
+          "number" : 1,
+          "result" : "SUCCESS",
+          "url" : "https://gerrit-ci.gerritforge.com/job/Gerrit-verifier-pipeline/job/79%252F346479%252F2/1/"
+        }
+      `);
+      // throw response.statusText;
     }
     const build: BuildDetail = await response.json();
     return build;
