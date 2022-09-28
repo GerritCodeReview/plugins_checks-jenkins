@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "01a6b05f_674b1ca0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1152092
+      },
+      "writtenOn": "2022-09-28T09:24:30Z",
+      "side": 1,
+      "message": "Hello Thomas. Thanks for pointing to the discussion on the mailing list. Please let me know if anything else is required from my side for this change to be merged.",
+      "revId": "a9290de055d29ba808c20e9d45b0faf74357d15f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
