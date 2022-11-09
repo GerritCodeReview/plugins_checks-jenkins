@@ -30,7 +30,6 @@ import org.eclipse.jgit.lib.Config;
 class GetConfig implements RestReadView<ProjectResource> {
   private static final String JENKINS_SECTION = "jenkins";
   private static final String JENKINS_URL_KEY = "url";
-  private static final String JENKINS_JOB_KEY = "job";
 
   private final PluginConfigFactory config;
   private final String pluginName;
@@ -50,7 +49,6 @@ class GetConfig implements RestReadView<ProjectResource> {
       JenkinsChecksConfig jenkinsCfg = new JenkinsChecksConfig();
       jenkinsCfg.name = instance;
       jenkinsCfg.url = cfg.getString(JENKINS_SECTION, instance, JENKINS_URL_KEY);
-      jenkinsCfg.jobs = cfg.getStringList(JENKINS_SECTION, instance, JENKINS_JOB_KEY);
       result.add(jenkinsCfg);
     }
     return Response.ok(result);
@@ -59,9 +57,5 @@ class GetConfig implements RestReadView<ProjectResource> {
   static class JenkinsChecksConfig {
     String name;
     String url;
-    //TODO(Thomas): It would be preferable to not have to configure any jobs, but
-    // to let Jenkins know which Jobs worked on a PatchSet. This will require
-    // additional changes in Jenkins however.
-    String[] jobs;
   }
 }

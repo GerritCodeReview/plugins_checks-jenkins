@@ -15,12 +15,12 @@
  * limitations under the License.
  */
 import {
-  Category,
+  Action,
+  ActionResult,
   ChangeData,
   CheckResult,
   CheckRun,
   ChecksProvider,
-  LinkIcon,
   ResponseCode,
   RunStatus,
 } from '@gerritcodereview/typescript-api/checks';
@@ -29,23 +29,35 @@ import {PluginApi} from '@gerritcodereview/typescript-api/plugin';
 export declare interface Config {
   name: string;
   url: string;
-  jobs: string[];
 }
 
-export declare interface Job {
-  exists: boolean;
-  builds: Build[];
+export declare interface JenkinsCheckRun {
+  actions: JenkinsAction[];
+  attempt: number;
+  change: number;
+  checkDescription: string;
+  checkLink: string;
+  checkName: string;
+  externalId: string;
+  finishedTimestamp: string;
+  labelName: string;
+  patchset: number;
+  results: CheckResult[];
+  scheduledTimestamp: string;
+  startedTimestamp: string;
+  status: RunStatus;
+  statusDesciption: string;
+  statusLink: string;
 }
 
-export declare interface Build {
-  number: number;
-  url: string;
-}
-
-export declare interface BuildDetail {
-  number: number;
-  building: boolean;
-  result: string;
+export declare interface JenkinsAction {
+  data: string;
+  disabled: boolean;
+  method: string;
+  name: string;
+  primary: boolean;
+  summary: boolean;
+  tooltip: string;
   url: string;
 }
 
@@ -77,56 +89,23 @@ export class ChecksFetcher implements ChecksProvider {
     }
     const checkRuns: CheckRun[] = [];
     for (const jenkins of this.configs) {
-      for (const jenkinsJob of jenkins.jobs) {
-        // TODO: Requests to Jenkins should be proxied through the Gerrit backend
-        // to avoid CORS requests.
-        const job: Job = await this.fetchJobInfo(
-          this.buildJobApiUrl(jenkins.url, jenkinsJob, changeData)
-        );
-
-        for (const build of job.builds) {
-          checkRuns.push(
-            this.convert(
-              jenkinsJob,
-              changeData,
-              await this.fetchBuildInfo(this.buildBuildApiUrl(build.url))
-            )
-          );
-        }
-      }
+      // TODO: Requests to Jenkins should be proxied through the Gerrit backend
+      // to avoid CORS requests.
+      await this.fetchFromJenkins(
+        `${jenkins.url}/gerrit/check-runs?change=${changeData.changeNumber}&patchset=${changeData.patchsetNumber}`
+      )
+        .then(response => response.json())
+        .then(data => {
+          data.runs.forEach((run: JenkinsCheckRun) => {
+            checkRuns.push(this.convert(run));
+          });
+        });
     }
 
     return {
       responseCode: ResponseCode.OK,
       runs: checkRuns,
     };
-  }
-
-  buildJobApiUrl(
-    jenkinsUrl: string,
-    jenkinsJob: string,
-    changeData: ChangeData
-  ) {
-    let changeShard: string = changeData.changeNumber.toString().slice(-2);
-    if (changeShard.length === 1) {
-      changeShard = '0' + changeShard;
-    }
-    return (
-      jenkinsUrl +
-      '/job/' +
-      jenkinsJob +
-      '/job/' +
-      changeShard +
-      '%252F' +
-      changeData.changeNumber.toString() +
-      '%252F' +
-      changeData.patchsetNumber.toString() +
-      '/api/json?tree=builds[number,url]'
-    );
-  }
-
-  buildBuildApiUrl(baseUrl: string) {
-    return baseUrl + 'api/json?tree=number,result,building,url';
   }
 
   fetchConfig(changeData: ChangeData): Promise<Config[]> {
@@ -138,86 +117,54 @@ export class ChecksFetcher implements ChecksProvider {
       );
   }
 
-  async fetchJobInfo(url: string): Promise<Job> {
-    let response: Response;
-    try {
-      response = await this.fetchFromJenkins(url);
-      if (!response.ok) {
-        throw response.statusText;
-      }
-    } catch (e) {
-      return {
-        exists: false,
-        builds: [],
-      };
-    }
-    const job: Job = await response.json();
-    return job;
-  }
-
-  async fetchBuildInfo(url: string): Promise<BuildDetail> {
-    const response = await this.fetchFromJenkins(url);
-    if (!response.ok) {
-      throw response.statusText;
-    }
-    const build: BuildDetail = await response.json();
-    return build;
-  }
-
-  convert(
-    checkName: string,
-    changeData: ChangeData,
-    build: BuildDetail
-  ): CheckRun {
-    let status: RunStatus;
-    const results: CheckResult[] = [];
-
-    if (build.result !== null) {
-      status = RunStatus.COMPLETED;
-      let resultCategory: Category;
-      switch (build.result) {
-        case 'SUCCESS':
-          resultCategory = Category.SUCCESS;
-          break;
-        case 'FAILURE':
-          resultCategory = Category.ERROR;
-          break;
-        default:
-          resultCategory = Category.WARNING;
-      }
-
-      const checkResult: CheckResult = {
-        category: resultCategory,
-        summary: `Result: ${build.result}`,
-        links: [
-          {
-            url: build.url + '/console',
-            primary: true,
-            icon: LinkIcon.EXTERNAL,
-          },
-        ],
-      };
-      results.push(checkResult);
-    } else if (build.building) {
-      status = RunStatus.RUNNING;
-    } else {
-      status = RunStatus.RUNNABLE;
-    }
-
-    const run: CheckRun = {
-      change: changeData.changeNumber,
-      patchset: changeData.patchsetNumber,
-      attempt: build.number,
-      checkName,
-      checkLink: build.url,
-      status,
-      results,
+  convert(run: JenkinsCheckRun): CheckRun {
+    const convertedRun: CheckRun = {
+      attempt: run.attempt,
+      change: run.change,
+      checkDescription: run.checkDescription,
+      checkLink: run.checkLink,
+      checkName: run.checkName,
+      externalId: run.externalId,
+      finishedTimestamp: new Date(run.finishedTimestamp),
+      labelName: run.labelName,
+      patchset: run.patchset,
+      results: run.results,
+      scheduledTimestamp: new Date(run.scheduledTimestamp),
+      startedTimestamp: new Date(run.startedTimestamp),
+      status: run.status,
+      statusDescription: run.statusDesciption,
+      statusLink: run.statusLink,
     };
-    return run;
+    const actions: Action[] = [];
+    for (const action of run.actions) {
+      actions.push({
+        name: action.name,
+        tooltip: action.tooltip,
+        primary: action.primary,
+        summary: action.summary,
+        disabled: action.disabled,
+        callback: () => this.rerun(action.url),
+      });
+    }
+    convertedRun.actions = actions;
+    return convertedRun;
   }
 
   private fetchFromJenkins(url: string): Promise<Response> {
-    const options: RequestInit = { credentials: 'include' };
+    const options: RequestInit = {credentials: 'include'};
     return fetch(url, options);
+  }
+
+  private rerun(url: string): Promise<ActionResult> {
+    return this.fetchFromJenkins(url)
+      .then(_ => {
+        return {
+          message: 'Run triggered.',
+          shouldReload: true,
+        };
+      })
+      .catch(e => {
+        return {message: `Triggering the run failed: ${e.message}`};
+      });
   }
 }

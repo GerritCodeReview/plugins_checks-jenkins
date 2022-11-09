@@ -1,23 +1,17 @@
 Implementation of checks UI for Jenkins CI servers
+==================================================
 
 This plugin registers a `ChecksProvider` with the Gerrit UI that will fetch
 build results for a change from configured Jenkins servers and provide them to
 the checks panel in a change screen.
 
-Limitations
+Requirements
 -----------
 
-Currently, only multibranch-pipeline jobs using the Gerrit SCM-source provided
-by the link:https://plugins.jenkins.io/gerrit-code-review/[gerrit-code-review]-
-plugin are supported.
+The Jenkins servers have to support CORS-requests. This can for example be achieved
+by using a reverse proxy that sets the `Access-Control-Allow-Origin` and
+`Access-Control-Allow-Credentials` header.
 
-The Jenkins Remote Access API does not provide all the information that could
-be displayed in Gerrit, e.g. a result summary. Thus, as of now, this plugin
-does not make full use of the checks API. As of right now, it will display the
-following data in the UI:
-
-- Builds for the selected patchset including previous attempts
-- Status of the build
-- Result of the build
-- Link to the build and its logs
-- A result summary stating the result category used by the CI (e.g. `Result: UNSTABLE`)
+The Jenkins server additionally needs to install the
+link:https://review.gerrithub.io/admin/repos/tdraebing/gerritchangequery-plugin,general[gerrit-change-query]
+plugin that enables querying for job runs working on a given patchset.
