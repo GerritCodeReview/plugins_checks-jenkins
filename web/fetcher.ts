@@ -92,7 +92,7 @@ export class ChecksFetcher implements ChecksProvider {
       // TODO: Requests to Jenkins should be proxied through the Gerrit backend
       // to avoid CORS requests.
       await this.fetchFromJenkins(
-        `${jenkins.url}/gerrit/check-runs?change=${changeData.changeNumber}&patchset=${changeData.patchsetNumber}`
+        `${jenkins.url}/gerrit-checks/runs?change=${changeData.changeNumber}&patchset=${changeData.patchsetNumber}`
       )
         .then(response => response.json())
         .then(data => {
