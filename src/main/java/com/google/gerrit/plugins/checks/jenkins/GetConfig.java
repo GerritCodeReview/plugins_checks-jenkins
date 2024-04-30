@@ -44,7 +44,7 @@ class GetConfig implements RestReadView<ProjectResource> {
   public Response<Set<JenkinsChecksConfig>> apply(ProjectResource project)
       throws NoSuchProjectException {
     Set<JenkinsChecksConfig> result = new HashSet<>();
-    Config cfg = config.getProjectPluginConfig(project.getNameKey(), pluginName);
+    Config cfg = config.getProjectPluginConfigWithInheritance(project.getNameKey(), pluginName);
     for (String instance : cfg.getSubsections(JENKINS_SECTION)) {
       JenkinsChecksConfig jenkinsCfg = new JenkinsChecksConfig();
       jenkinsCfg.name = instance;
