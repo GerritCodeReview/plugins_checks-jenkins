@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3e22d55e_516b7ee6",
+        "filename": "web/fetcher.ts",
+        "patchSetId": 1
+      },
+      "lineNbr": 91,
+      "author": {
+        "id": 1152670
+      },
+      "writtenOn": "2025-03-13T10:58:41Z",
+      "side": 1,
+      "message": "What if there are multiple jenkins servers configured and user is not logged in on one of these servers ?",
+      "range": {
+        "startLine": 91,
+        "startChar": 15,
+        "endLine": 91,
+        "endChar": 22
+      },
+      "revId": "7fac805d8413b11d725c4aa095e990e9583a572b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
