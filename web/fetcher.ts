@@ -91,15 +91,18 @@ export class ChecksFetcher implements ChecksProvider {
     for (const jenkins of this.configs) {
       // TODO: Requests to Jenkins should be proxied through the Gerrit backend
       // to avoid CORS requests.
-      await this.fetchFromJenkins(
-        `${jenkins.url}/gerrit-checks/runs?change=${changeData.changeNumber}&patchset=${changeData.patchsetNumber}`
-      )
-        .then(response => response.json())
-        .then(data => {
-          data.runs.forEach((run: JenkinsCheckRun) => {
-            checkRuns.push(this.convert(run));
-          });
-        });
+      const checks_url = `${jenkins.url}/gerrit-checks/runs?change=${changeData.changeNumber}&patchset=${changeData.patchsetNumber}`;
+      const response = await this.fetchFromJenkins(checks_url);
+      if (response.status === 403) {
+        return {
+          responseCode: ResponseCode.NOT_LOGGED_IN,
+          loginCallback: () => window.open(jenkins.url),
+        };
+      }
+      const data = await response.json();
+      data.runs.forEach((run: JenkinsCheckRun) => {
+        checkRuns.push(this.convert(run));
+      });
     }
 
     return {
