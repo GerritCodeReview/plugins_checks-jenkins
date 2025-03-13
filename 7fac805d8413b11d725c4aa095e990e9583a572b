@@ -22,6 +22,53 @@
       },
       "revId": "7fac805d8413b11d725c4aa095e990e9583a572b",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "532bed20_71f78f64",
+        "filename": "web/fetcher.ts",
+        "patchSetId": 1
+      },
+      "lineNbr": 91,
+      "author": {
+        "id": 1002666
+      },
+      "writtenOn": "2025-03-13T15:59:06Z",
+      "side": 1,
+      "message": "I don\u0027t think you can avoid logging into each of them since you can\u0027t know which ones will have jobs for this change.",
+      "parentUuid": "3e22d55e_516b7ee6",
+      "range": {
+        "startLine": 91,
+        "startChar": 15,
+        "endLine": 91,
+        "endChar": 22
+      },
+      "revId": "7fac805d8413b11d725c4aa095e990e9583a572b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "61848898_99e08868",
+        "filename": "web/fetcher.ts",
+        "patchSetId": 1
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 1002666
+      },
+      "writtenOn": "2025-03-13T15:59:06Z",
+      "side": 1,
+      "message": "Maybe use `window.open` and `popup` like [`gr-error-manager#createLoginPopup()`](https://gerrit.googlesource.com/gerrit/+/master/polygerrit-ui/app/elements/core/gr-error-manager/gr-error-manager.ts#475) does? Ideally that would mean the user doesn\u0027t need to hit back or manually reload the page.",
+      "range": {
+        "startLine": 99,
+        "startChar": 31,
+        "endLine": 99,
+        "endChar": 53
+      },
+      "revId": "7fac805d8413b11d725c4aa095e990e9583a572b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
