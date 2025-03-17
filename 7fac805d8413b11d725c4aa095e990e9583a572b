@@ -50,6 +50,29 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "8e28140c_a657adfa",
+        "filename": "web/fetcher.ts",
+        "patchSetId": 1
+      },
+      "lineNbr": 96,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2025-03-17T07:37:33Z",
+      "side": 1,
+      "message": "What happens if the user is logged in but just doesn\u0027t have the permission to execute the query?",
+      "range": {
+        "startLine": 96,
+        "startChar": 30,
+        "endLine": 96,
+        "endChar": 33
+      },
+      "revId": "7fac805d8413b11d725c4aa095e990e9583a572b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "61848898_99e08868",
         "filename": "web/fetcher.ts",
         "patchSetId": 1
@@ -61,6 +84,30 @@
       "writtenOn": "2025-03-13T15:59:06Z",
       "side": 1,
       "message": "Maybe use `window.open` and `popup` like [`gr-error-manager#createLoginPopup()`](https://gerrit.googlesource.com/gerrit/+/master/polygerrit-ui/app/elements/core/gr-error-manager/gr-error-manager.ts#475) does? Ideally that would mean the user doesn\u0027t need to hit back or manually reload the page.",
+      "range": {
+        "startLine": 99,
+        "startChar": 31,
+        "endLine": 99,
+        "endChar": 53
+      },
+      "revId": "7fac805d8413b11d725c4aa095e990e9583a572b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6f1d2f2e_e31fc68c",
+        "filename": "web/fetcher.ts",
+        "patchSetId": 1
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2025-03-17T07:37:33Z",
+      "side": 1,
+      "message": "+1\nEspecially if there are multiple Jnekins instances, this would avoid fetching teh data all over again as often as there is a login required in one of the servers.",
+      "parentUuid": "61848898_99e08868",
       "range": {
         "startLine": 99,
         "startChar": 31,
