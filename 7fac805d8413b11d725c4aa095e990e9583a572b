@@ -48,6 +48,30 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "118f5138_10ed0955",
+        "filename": "web/fetcher.ts",
+        "patchSetId": 1
+      },
+      "lineNbr": 91,
+      "author": {
+        "id": 1152670
+      },
+      "writtenOn": "2025-03-17T13:12:07Z",
+      "side": 1,
+      "message": "Acknowledged",
+      "parentUuid": "532bed20_71f78f64",
+      "range": {
+        "startLine": 91,
+        "startChar": 15,
+        "endLine": 91,
+        "endChar": 22
+      },
+      "revId": "7fac805d8413b11d725c4aa095e990e9583a572b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "8e28140c_a657adfa",
@@ -108,6 +132,30 @@
       "side": 1,
       "message": "+1\nEspecially if there are multiple Jnekins instances, this would avoid fetching teh data all over again as often as there is a login required in one of the servers.",
       "parentUuid": "61848898_99e08868",
+      "range": {
+        "startLine": 99,
+        "startChar": 31,
+        "endLine": 99,
+        "endChar": 53
+      },
+      "revId": "7fac805d8413b11d725c4aa095e990e9583a572b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "02157d32_0523bb42",
+        "filename": "web/fetcher.ts",
+        "patchSetId": 1
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 1152670
+      },
+      "writtenOn": "2025-03-17T13:12:07Z",
+      "side": 1,
+      "message": "I wanted to add a popup function something like below but unfortunately there\u0027s no reliable way to know if the popup is closed in case of [cors requests](https://developer.mozilla.org/en-US/docs/Web/API/Window/open#:~:text\u003dIf%20the%20Cross%2DOrigin%2DOpener%2DPolicy%20HTTP%20header%20is%20being%20used%2C%20and%20the%20document%20policies%20are%20such%20that%20the%20document%20is%20opened%20in%20a%20new%20browsing%20context%20group%2C%20references%20to%20the%20opened%20window%20are%20severed%20and%20the%20returned%20object%20will%20indicate%20that%20the%20opened%20window%20is%20closed%20(closed%20is%20true).). Additionally, it seems popups are not recommended, refer [this](https://developer.mozilla.org/en-US/docs/Web/API/Window/open#avoid_resorting_to_window.open). So maybe it\u0027ll be better to open a new tab for login ?\n```\n  private loginPopup(url: string) {\n    const width \u003d 600;\n    const height \u003d 400;\n    const left \u003d (screen.width - width) / 2;\n    const top \u003d (screen.height - height) / 2;\n    const win \u003d window.open(url, \u0027_blank\u0027, `popup,width\u003d${width},height\u003d${height},left\u003d${left},top\u003d${top}`);\n    if (win \u003d\u003d\u003d null) {\n      throw new Error(\"Could not open login popup\");\n    }\n    var timer \u003d setInterval(function (plugin: PluginApi) {\n      if (win.closed) {\n        clearInterval(timer);\n        plugin.checks().announceUpdate();\n      }\n    }, 1000, this.plugin);\n  }\n```",
+      "parentUuid": "6f1d2f2e_e31fc68c",
       "range": {
         "startLine": 99,
         "startChar": 31,
