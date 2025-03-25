@@ -284,6 +284,30 @@
       },
       "revId": "7fac805d8413b11d725c4aa095e990e9583a572b",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "24b9166c_13d24690",
+        "filename": "web/fetcher.ts",
+        "patchSetId": 1
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 1152670
+      },
+      "writtenOn": "2025-03-25T04:53:21Z",
+      "side": 1,
+      "message": "We have saml plugin installed on our jenkins server which takes care of SSO and page redirection. How it works is like this:\n\n- User goes to a jenkins page\n- REST API returns 403\n- This triggers the saml plugin to initiate login\n- Once login is complete, saml plugin is informed using the `finishLogin` endpoint\n- saml plugin redirects to the url user initially accessed\n\nThe only way I believe we can redirect back to gerrit is by having a listener to check if the sign in process is complete, but if that\u0027s acceptable we can add the listener in this project as well when we create the login popup and refresh the page once user is signed in.",
+      "parentUuid": "acda26a4_141a7a5b",
+      "range": {
+        "startLine": 99,
+        "startChar": 31,
+        "endLine": 99,
+        "endChar": 53
+      },
+      "revId": "7fac805d8413b11d725c4aa095e990e9583a572b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
