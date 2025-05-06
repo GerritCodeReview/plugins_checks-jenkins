@@ -16,6 +16,29 @@
       "message": "@thomas.draebing@sap.com Can you review this change again ?",
       "revId": "5ee806bf6869927532189a582091d20ab86e29f2",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cbe4ba46_63e40977",
+        "filename": "web/fetcher.ts",
+        "patchSetId": 2
+      },
+      "lineNbr": 96,
+      "author": {
+        "id": 1002666
+      },
+      "writtenOn": "2025-05-06T20:39:33Z",
+      "side": 1,
+      "message": "Can you move \u0026 update this comment to note the current solution?\n\n```suggestion\n      const checks_url \u003d `${jenkins.url}/gerrit-checks/runs?change\u003d${changeData.changeNumber}\u0026patchset\u003d${changeData.patchsetNumber}`;\n      const response \u003d await this.fetchFromJenkins(checks_url);\n      if (response.status \u003d\u003d\u003d 403) {\n        // Give the user a LOGIN button that will open a new tab where they can log into Jenkins\n```",
+      "range": {
+        "startLine": 92,
+        "startChar": 0,
+        "endLine": 96,
+        "endChar": 36
+      },
+      "revId": "5ee806bf6869927532189a582091d20ab86e29f2",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
