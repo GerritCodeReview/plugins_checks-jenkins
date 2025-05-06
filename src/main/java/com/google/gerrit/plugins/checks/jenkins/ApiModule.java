@@ -15,6 +15,7 @@
 package com.google.gerrit.plugins.checks.jenkins;
 
 import static com.google.gerrit.server.project.ProjectResource.PROJECT_KIND;
+import static com.google.gerrit.server.change.RevisionResource.REVISION_KIND;
 
 import com.google.gerrit.extensions.restapi.RestApiModule;
 
@@ -22,5 +23,6 @@ public class ApiModule extends RestApiModule {
   @Override
   protected void configure() {
     get(PROJECT_KIND, "config").to(GetConfig.class);
+    get(REVISION_KIND, "jenkins-checks").to(JenkinsDataFetcher.class);
   }
 }

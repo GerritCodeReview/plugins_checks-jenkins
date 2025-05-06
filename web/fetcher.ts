@@ -71,50 +71,46 @@ export class ChecksFetcher implements ChecksProvider {
     this.configs = null;
   }
 
-  async fetch(changeData: ChangeData) {
-    if (this.configs === null) {
-      await this.fetchConfig(changeData)
-        .then(result => {
-          this.configs = result;
+  private withTimeout<T>(promise: Promise<T>, timeoutMs: number): Promise<T> {
+    return new Promise((resolve, reject) => {
+      const timeoutId = setTimeout(() => {
+        reject(new Error(`The waitUntil() predicate is still false after ${timeoutMs} ms.`));
+      }, timeoutMs);
+
+      promise
+        .then((result) => {
+          clearTimeout(timeoutId);
+          resolve(result);
         })
-        .catch(reason => {
-          throw reason;
+        .catch((error) => {
+          clearTimeout(timeoutId);
+          reject(error);
         });
-    }
-    if (this.configs === null) {
-      return {
-        responseCode: ResponseCode.OK,
-        runs: [],
-      };
-    }
+    });
+  }
+
+  async fetch(changeData: ChangeData) {
     const checkRuns: CheckRun[] = [];
-    for (const jenkins of this.configs) {
-      // TODO: Requests to Jenkins should be proxied through the Gerrit backend
-      // to avoid CORS requests.
-      await this.fetchFromJenkins(
-        `${jenkins.url}/gerrit-checks/runs?change=${changeData.changeNumber}&patchset=${changeData.patchsetNumber}`
-      )
-        .then(response => response.json())
-        .then(data => {
-          data.runs.forEach((run: JenkinsCheckRun) => {
-            checkRuns.push(this.convert(run));
-          });
-        });
+    const endpoint = `/changes/${changeData.changeNumber}/revisions/${changeData.patchsetNumber}/jenkins-checks`;
+
+    try {
+      const response = await this.withTimeout(this.plugin.restApi().get<string>(endpoint), 20000); // 20 second timeout
+      const data = JSON.parse(response); // Parse the JSON response
+      if (!data || !data.runs) {
+        console.error('Invalid response structure:', data);
+        throw new Error('Invalid response structure');
+      }
+      data.runs.forEach((run: JenkinsCheckRun) => {
+        checkRuns.push(this.convert(run));
+      });
+    } catch (error) {
+      console.error('Failed to fetch check runs from Jenkins:', error);
     }
 
     return {
       responseCode: ResponseCode.OK,
       runs: checkRuns,
     };
-  }
-
-  fetchConfig(changeData: ChangeData): Promise<Config[]> {
-    const pluginName = encodeURIComponent(this.plugin.getPluginName());
-    return this.plugin
-      .restApi()
-      .get<Config[]>(
-        `/projects/${encodeURIComponent(changeData.repo)}/${pluginName}~config`
-      );
   }
 
   convert(run: JenkinsCheckRun): CheckRun {

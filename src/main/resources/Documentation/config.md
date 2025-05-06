@@ -11,3 +11,7 @@ For each Jenkins instance a section with a unique name has to be added.
 
 jenkins.NAME.url
 : Base URL of Jenkins including protocol, e.g. https://gerrit-ci.gerritforge.com
+jenkins.NAME.user
+: User for Jenkins authentication
+jenkins.NAME.token
+: API token for Jenkins authentication
