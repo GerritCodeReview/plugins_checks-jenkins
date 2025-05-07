@@ -39,6 +39,72 @@
       },
       "revId": "5ee806bf6869927532189a582091d20ab86e29f2",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8d056a38_30e37419",
+        "filename": "web/fetcher.ts",
+        "patchSetId": 2
+      },
+      "lineNbr": 96,
+      "author": {
+        "id": 1152670
+      },
+      "writtenOn": "2025-05-07T05:09:15Z",
+      "side": 1,
+      "message": "Fix applied.",
+      "parentUuid": "cbe4ba46_63e40977",
+      "range": {
+        "startLine": 92,
+        "startChar": 0,
+        "endLine": 96,
+        "endChar": 36
+      },
+      "fixSuggestions": [
+        {
+          "fixId": "ad09fd5b_af6d67a2",
+          "description": "User suggestion",
+          "replacements": [
+            {
+              "path": "web/fetcher.ts",
+              "range": {
+                "startLine": 92,
+                "startChar": 0,
+                "endLine": 96,
+                "endChar": 36
+              },
+              "replacement": "      const checks_url \u003d `${jenkins.url}/gerrit-checks/runs?change\u003d${changeData.changeNumber}\u0026patchset\u003d${changeData.patchsetNumber}`;\n      const response \u003d await this.fetchFromJenkins(checks_url);\n      if (response.status \u003d\u003d\u003d 403) {\n        // Give the user a LOGIN button that will open a new tab where they can log into Jenkins"
+            }
+          ]
+        }
+      ],
+      "revId": "5ee806bf6869927532189a582091d20ab86e29f2",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3857cf88_3f0891ec",
+        "filename": "web/fetcher.ts",
+        "patchSetId": 2
+      },
+      "lineNbr": 96,
+      "author": {
+        "id": 1152670
+      },
+      "writtenOn": "2025-05-07T05:09:15Z",
+      "side": 1,
+      "message": "Fix applied.",
+      "parentUuid": "cbe4ba46_63e40977",
+      "range": {
+        "startLine": 92,
+        "startChar": 0,
+        "endLine": 96,
+        "endChar": 36
+      },
+      "revId": "5ee806bf6869927532189a582091d20ab86e29f2",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
