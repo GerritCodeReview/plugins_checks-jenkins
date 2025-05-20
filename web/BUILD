@@ -40,5 +40,5 @@ gerrit_js_bundle(
     entry_point = "_bazel_ts_out/plugin.js",
 )
 
-# Creates lint_test and lint_bin rules.
+# Creates lint_test and lint_bin rules...
 plugin_eslint()
