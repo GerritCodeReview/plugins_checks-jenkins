@@ -2,7 +2,8 @@ Jenkins Checks Configuration
 ============================
 
 Jenkins servers can be configured for a project by adding a file called
-`checks-jenkins.config` to the `refs/meta/config` branch of a project.
+`checks-jenkins.config` to the `refs/meta/config` branch of the project or one
+of its parents.
 
 File `checks-jenkins.config`
 ----------------------------
